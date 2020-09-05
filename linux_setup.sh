@@ -26,7 +26,6 @@ unity --reset
 #Install biotools
 sudo apt-get install tk-dev
 sudo apt-get install bwidget
-
 #Add installation repo
 sudo add-apt-repository ppa:ubuntugis/ppa
 #update
@@ -38,13 +37,15 @@ sudo apt-get update
 sudo apt-get install gdal-bin
 sudo apt-get -y install python-gdal             #Installs gdal
 sudo apt -y install gdal-bin python3-gdal       #python3
-#Install sf using conda (unproblematic)
+#Install "sf" and "foreign" using conda (unproblematic)
 conda create -n rsf -c conda-forge r-sf
 source activate rsf
+conda install -c conda-forge r-foreign 
 # In R terminal
 install.packages("rpanel", dependencies = TRUE)
 install.packages("SpatialEpi", dependencies=TRUE)
-
+## Activate conda environment before running R
+#========================
 
 
 
