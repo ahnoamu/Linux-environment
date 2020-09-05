@@ -30,7 +30,7 @@ sudo apt-get install bwidget
 sudo add-apt-repository ppa:ubuntugis/ppa
 #update
 sudo apt-get update
-#Install gdal
+#Install gdal  * ensure only a single version/installation is done, else problems downstream with installation of spatialEpi)
 sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev #updates gdal version
 #else 
 sudo apt-get update
