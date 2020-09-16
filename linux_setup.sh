@@ -48,4 +48,14 @@ install.packages("SpatialEpi", dependencies=TRUE)
 #========================
 
 
+#Upgrade packages in R after r-base version upgrade
+#Reference: https://github.com/rocker-org/shiny/issues/48
+#This is done in R shell 
+new_packages <- installed.packages()
+df <- as.data.frame(new_packages)
+D2 = subset(df, !(Built %in% c('4.0.0','4.0.2')))
+D2 <- as.data.frame(D2)
+install.packages(D2$Package)
+#===========================
+
 
